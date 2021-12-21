@@ -450,7 +450,9 @@ const NavbarListComponent = ({
             <a>자주묻는질문</a>
           </NavbarDropdownList>
           <NavbarDropdownList>
-            <a>공지사항</a>
+            <Link href="/info/board">
+              <a>공지사항</a>
+            </Link>
           </NavbarDropdownList>
         </NavbarDropdownThird>
       </NavbarList>
@@ -522,7 +524,9 @@ const NavbarListSmallComponent = ({
             <a>자주묻는질문</a>
           </NavbarDropdownSmallList>
           <NavbarDropdownSmallList>
-            <a>공지사항</a>
+            <Link href="/info/board">
+              <a>공지사항</a>
+            </Link>
           </NavbarDropdownSmallList>
         </NavbarDropdownSmallThird>
       </NavbarListSmall>

@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Navigation from "../components/navbar";
 import { useRouter } from "next/router";
@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
 
 html {
   font-size: 62.5%;
-  height: 500vh;
 }
 `;
 
@@ -38,13 +37,13 @@ function MyApp({ Component, pageProps }) {
   }, [pathname]);
 
   return (
-    <>
+    <React.Fragment>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Navigation />
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
+    </React.Fragment>
   );
 }
 

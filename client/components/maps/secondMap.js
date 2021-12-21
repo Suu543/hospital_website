@@ -34,14 +34,14 @@ const NavigateContainer = styled.div`
   }
 `;
 
-const Map = ({ lat, lng, address, pathURL }) => {
+const SecondMap = () => {
   // The things we need to track in state
   const [mapRef, setMapRef] = useState(null);
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [markerMap, setMarkerMap] = useState({});
   const [center, setCenter] = useState({
-    lat: parseInt(lat),
-    lng: parseInt(lng),
+    lat: 35.865009,
+    lng: 128.595005,
   });
   const [zoom, setZoom] = useState(5);
   const [clickedLatLng, setClickedLatLng] = useState(null);
@@ -58,7 +58,7 @@ const Map = ({ lat, lng, address, pathURL }) => {
   const myPlaces = [
     {
       id: "마리아유외과",
-      pos: { lat: parseInt(lat), lng: parseInt(lng) },
+      pos: { lat: 35.865009, lng: 128.595005 },
     },
   ];
 
@@ -109,7 +109,10 @@ const Map = ({ lat, lng, address, pathURL }) => {
     return (
       <MapContainer>
         <NavigateContainer>
-          <a target="_blank" href={pathURL}>
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/dir/925-2+Namsan-dong,+Jung-gu,+Daegu/35.8765373,128.605884/@35.865009,128.595005,15z/data=!4m9!4m8!1m5!1m1!1s0x3565e3c0f5d10241:0x2c9d3a3d5151bc9a!2m2!1d128.5927951!2d35.8650968!1m0!3e0?hl=en-US"
+          >
             <img src="../navigation.png" />
             길찾기
           </a>
@@ -124,7 +127,7 @@ const Map = ({ lat, lng, address, pathURL }) => {
           zoom={zoom}
           mapContainerStyle={{
             height: "70vh",
-            width: "100%",
+            width: "50%",
           }}
         >
           {myPlaces.map((place) => (
@@ -151,7 +154,7 @@ const Map = ({ lat, lng, address, pathURL }) => {
             >
               <div>
                 <h3>{selectedPlace.id}</h3>
-                <div>{address}</div>
+                <div>대구 중구 달구벌대로 418길 9</div>
               </div>
             </InfoWindow>
           )}
@@ -162,9 +165,9 @@ const Map = ({ lat, lng, address, pathURL }) => {
 
   setTimeout(() => {
     setZoom(18);
-  }, 2000);
+  }, 1000);
 
   return isLoaded ? renderMap() : null;
 };
 
-export default Map;
+export default SecondMap;

@@ -6,13 +6,14 @@ const boardSchema = new mongoose.Schema(
       type: String,
       min: 5,
       max: 70,
+      required: true,
     },
 
     body: {
       type: {},
-      required: true,
       min: 100,
       max: 20000,
+      required: true,
     },
 
     created_at: {

@@ -9,5 +9,6 @@ module.exports = {
     apiKey: "AIzaSyCaEskbiBzXNfuPVaZqD5HCwWXjuMX3Y6s",
     useDefaultUI: false,
     googleMapsMarkerIcon: "marker icon link",
+    REACT_APP_API: "http://localhost:8000",
   },
 };

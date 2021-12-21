@@ -40,8 +40,8 @@ const Map = ({ lat, lng, address, pathURL }) => {
   const [selectedPlace, setSelectedPlace] = useState(null);
   const [markerMap, setMarkerMap] = useState({});
   const [center, setCenter] = useState({
-    lat: parseInt(lat),
-    lng: parseInt(lng),
+    lat: 35.8543040967178,
+    lng: 128.61540044041718,
   });
   const [zoom, setZoom] = useState(5);
   const [clickedLatLng, setClickedLatLng] = useState(null);
@@ -58,7 +58,7 @@ const Map = ({ lat, lng, address, pathURL }) => {
   const myPlaces = [
     {
       id: "마리아유외과",
-      pos: { lat: parseInt(lat), lng: parseInt(lng) },
+      pos: { lat: 35.8543040967178, lng: 128.61540044041718 },
     },
   ];
 
@@ -109,7 +109,10 @@ const Map = ({ lat, lng, address, pathURL }) => {
     return (
       <MapContainer>
         <NavigateContainer>
-          <a target="_blank" href={pathURL}>
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/dir//%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C+%EC%88%98%EC%84%B1%EA%B5%AC+%EB%AA%85%EB%8D%95%EB%A1%9C+414/@35.8541302,128.6154219,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3565e24a16e67feb:0x7d10869af14437f1!2m2!1d128.6154219!2d35.8541302"
+          >
             <img src="../navigation.png" />
             길찾기
           </a>
@@ -124,7 +127,7 @@ const Map = ({ lat, lng, address, pathURL }) => {
           zoom={zoom}
           mapContainerStyle={{
             height: "70vh",
-            width: "100%",
+            width: "50%",
           }}
         >
           {myPlaces.map((place) => (
@@ -151,7 +154,7 @@ const Map = ({ lat, lng, address, pathURL }) => {
             >
               <div>
                 <h3>{selectedPlace.id}</h3>
-                <div>{address}</div>
+                <div>대구광역시 수성구 명덕로 414</div>
               </div>
             </InfoWindow>
           )}
@@ -162,7 +165,7 @@ const Map = ({ lat, lng, address, pathURL }) => {
 
   setTimeout(() => {
     setZoom(18);
-  }, 2000);
+  }, 1000);
 
   return isLoaded ? renderMap() : null;
 };

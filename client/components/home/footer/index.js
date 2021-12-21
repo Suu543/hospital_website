@@ -28,6 +28,7 @@ const FooterHeaderLists = styled.ul`
   flex: 2 1 45rem;
   font-family: "Noto Sans KR", sans-serif;
   margin: 2rem 0;
+  justify-content: space-between;
 `;
 
 const FooterHeaderLogos = styled.ul``;
@@ -88,6 +89,9 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/intro/locations">찾아오시는 길</Link>
+            </li>
+            <li>
+              <Link href="/">개인정보 취급방침</Link>
             </li>
           </FooterHeaderLists>
           <FooterHeaderLogos></FooterHeaderLogos>

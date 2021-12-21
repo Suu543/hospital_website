@@ -70,6 +70,7 @@ const IntroHeaderBox = styled.div`
     color: #004c4c;
     font-size: 2rem;
     font-weight: bolder;
+    font-family: "Noto Sans KR", sans-serif;
   }
 
   @media all and (max-width: 1650px) and (min-width: 1275px) {
@@ -106,12 +107,14 @@ const IntroHeaderBoxContent = styled.div`
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 1rem;
+    font-family: "Noto Sans KR", sans-serif;
   }
 
   a {
     color: #a66d6a;
     font-size: 1.3rem;
     font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
   }
 `;
 
@@ -126,16 +129,17 @@ const IntroBodyHeader = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 10rem;
 
   h4 {
     font-size: 1.6rem;
-    font-family: "Playfair Display", serif;
+    font-family: "Noto Sans KR", sans-serif;
     color: #004c4c;
   }
 
   h2 {
     font-size: 3.5rem;
-    font-family: "Playfair Display", serif;
+    font-family: "Noto Sans KR", sans-serif;
     color: #004c4c;
     margin-bottom: 3rem;
   }
@@ -297,7 +301,7 @@ const IntroBodyContentsMain = styled.div`
   h2 {
     font-size: 3rem;
     font-weight: bold;
-    font-family: "Playfair Display", serif;
+    font-family: "Noto Sans KR", sans-serif;
     color: #004c4c;
     margin-top: 5rem;
   }
@@ -408,7 +412,7 @@ const IntroBodyComponent = () => {
           <IntroBodyContentCardComponent
             title="원스톱 시스템"
             content="여러 번 방문하는 번거로움 없이 모든 검사가 당일 가능합니다. 검진의 결과 상담 및 유방암이나 갑상선암으로 진단된 환자분의 치료 경과에 대한 상담, 수술 후 관리 및 생활에 대한 상담에 가족과 같은 마음으로 진료합니다."
-            imgSrc="./healthcare.png"
+            imgSrc="../healthcare.png"
           />
           <IntroBodyContentCardComponent
             title="불안한 여성들의 마음"
@@ -417,12 +421,12 @@ const IntroBodyComponent = () => {
     하기 힘든 말을 해야 하지만 궁금한 것이 있어도 잘 물어볼 수
     없습니다. 두 분의 실력있는 여의사 선생님과 함께 소중한 당신의 유방을
     지키십시오."
-            imgSrc="./woman.png"
+            imgSrc="../woman.png"
           />
           <IntroBodyContentCardComponent
             title="유방갑상선 전문 Total Care Clinic"
             content="서울 아산병원 유방 내분비 외과에서 전문의로 재직했던 김정경 원장의 실력과 우수한 영상장비, 직원들의 높은 따뜻한 서비스로 진료를 완성되게 합니다."
-            imgSrc="./medical-check.png"
+            imgSrc="../medical-check.png"
           />
         </IntroBodyContentsMain>
       </IntroBodyContent>
@@ -430,11 +434,21 @@ const IntroBodyComponent = () => {
   );
 };
 
+// const Intro = () => {
+//   return (
+//     <IntroContainer>
+//       <IntroWrapper>
+//         <IntroHeaderComponent />
+//         <IntroBodyComponent />
+//       </IntroWrapper>
+//     </IntroContainer>
+//   );
+// };
+
 const Intro = () => {
   return (
     <IntroContainer>
       <IntroWrapper>
-        <IntroHeaderComponent />
         <IntroBodyComponent />
       </IntroWrapper>
     </IntroContainer>
