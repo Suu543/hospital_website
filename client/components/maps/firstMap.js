@@ -8,6 +8,11 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 
+const mapStyle = {
+  height: "50vh",
+  width: "100%",
+};
+
 const MapContainer = styled.div`
   position: relative;
 `;
@@ -125,10 +130,7 @@ const FirstMap = () => {
           onClick={(e) => setClickedLatLng(e.latLng.toJSON())}
           center={center}
           zoom={zoom}
-          mapContainerStyle={{
-            height: "70vh",
-            width: "50%",
-          }}
+          mapContainerStyle={mapStyle}
         >
           {myPlaces.map((place) => (
             <Marker

@@ -401,8 +401,8 @@ const NavbarListComponent = ({
             </Link>
           </NavbarDropdownList>
           <NavbarDropdownList>
-            <Link href="/intro/introFacility">
-              <a>병원 둘러보기</a>
+            <Link href="/intro/introTime">
+              <a>진료안내</a>
             </Link>
           </NavbarDropdownList>
           <NavbarDropdownList>
@@ -447,11 +447,13 @@ const NavbarListComponent = ({
         <a>마리아유외과 소식</a>
         <NavbarDropdownThird mouseThird={mouseThird}>
           <NavbarDropdownList>
-            <a>자주묻는질문</a>
+            <Link href="/info/notice">
+              <a>공지사항</a>
+            </Link>
           </NavbarDropdownList>
           <NavbarDropdownList>
             <Link href="/info/board">
-              <a>공지사항</a>
+              <a>게시판</a>
             </Link>
           </NavbarDropdownList>
         </NavbarDropdownThird>
@@ -521,11 +523,13 @@ const NavbarListSmallComponent = ({
         </a>
         <NavbarDropdownSmallThird collapseThird={collapseThird}>
           <NavbarDropdownSmallList>
-            <a>자주묻는질문</a>
+            <Link href="/info/notice">
+              <a>공지사항</a>
+            </Link>
           </NavbarDropdownSmallList>
           <NavbarDropdownSmallList>
             <Link href="/info/board">
-              <a>공지사항</a>
+              <a>게시판</a>
             </Link>
           </NavbarDropdownSmallList>
         </NavbarDropdownSmallThird>
@@ -541,6 +545,9 @@ const GlobalNavbar = () => {
     // some browsers (like safari) may require a timeout to delay calling this
     // function after a page has loaded; otherwise, it may not update the position
     setNavbarClick(false);
+    setCollapseFirst(false);
+    setCollapseSecond(false);
+    setCollapseThird(false);
   }, [pathname]);
 
   const [mouseFirst, setMouseFirst] = useState(false);

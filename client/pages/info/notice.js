@@ -59,8 +59,8 @@ const BoardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin-bottom: 5rem;
+  align-items: center;
 
   @media all and (max-width: 1400px) and (min-width: 1110px) {
     width: 70%;
@@ -164,7 +164,7 @@ const BoardNavigation = styled.ul`
   }
 `;
 
-const Board = () => {
+const Notice = () => {
   const [boards, setBoards] = useState([]);
   const [pagination, setPagination] = useState([]);
   const [postPerPage, SetPostPerPage] = useState(10);
@@ -283,8 +283,8 @@ const Board = () => {
   return (
     <Container>
       <ContainerTop>
-        <h4>BOARDS</h4>
-        <h2>게시판</h2>
+        <h4>NOTICE</h4>
+        <h2>공지사항</h2>
         <h3>
           마리아유외과를 방문해주신 모든 분들께 <br /> 감사의 마음을 전합니다
         </h3>
@@ -350,4 +350,4 @@ const Board = () => {
   );
 };
 
-export default Board;
+export default Notice;

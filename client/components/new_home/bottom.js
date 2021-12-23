@@ -6,6 +6,7 @@ import moment from "moment";
 
 const BottomContainer = styled.div`
   margin-top: 5rem;
+  margin-bottom: 5rem;
   width: 100%;
 `;
 
@@ -13,17 +14,48 @@ const BottomWrapper = styled.div`
   width: 60%;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+
+  @media all and (max-width: 1650px) and (min-width: 1325px) {
+    margin: auto;
+    width: 70%;
+  }
+
+  @media all and (max-width: 1324px) and (min-width: 1185px) {
+    margin: auto;
+    width: 80%;
+  }
+
+  @media all and (max-width: 1184px) {
+    margin: auto;
+    width: 90%;
+    gap: 0;
+  }
 `;
 
 const BottomBoardLeftWrapper = styled.div`
-  width: 95%;
+  width: 45%;
   min-height: 40vh;
+  margin: auto;
+
+  @media all and (max-width: 764px) {
+    width: 90%;
+    min-height: 40vh;
+    margin: auto;
+  }
 `;
 
 const BottomBoardRightWrapper = styled.div`
-  width: 95%;
+  width: 45%;
   min-height: 40vh;
+  margin: auto;
+
+  @media all and (max-width: 764px) {
+    width: 90%;
+    min-height: 40vh;
+    margin: auto;
+  }
 `;
 
 const BottomBoardHeadWrapper = styled.div`

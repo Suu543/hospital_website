@@ -127,7 +127,7 @@ const SecondMap = () => {
           zoom={zoom}
           mapContainerStyle={{
             height: "70vh",
-            width: "50%",
+            width: "100%",
           }}
         >
           {myPlaces.map((place) => (

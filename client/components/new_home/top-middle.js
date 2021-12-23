@@ -5,13 +5,35 @@ const TopMiddleContainer = styled.div`
   margin-top: 25vh;
   margin-bottom: 20vh;
   width: 100%;
+
+  @media all and (max-width: 1650px) and (min-width: 1500px) {
+    margin-top: 15vh;
+  }
+
+  @media all and (max-width: 1499px) and (min-width: 1370px) {
+    margin-top: 10vh;
+  }
+
+  @media all and (max-width: 1369px) and (min-width: 966px) {
+    margin-top: 0;
+  }
+
+  @media all and (max-width: 965px) {
+    margin-top: 0;
+    margin-bottom: 10vh;
+  }
 `;
 
 const TopMiddleWrapper = styled.div`
   display: flex;
-  width: 70%;
+  width: 80%;
   justify-content: center;
   margin: auto;
+  flex-wrap: wrap;
+
+  @media all and (max-width: 764px) {
+    gap: 1rem;
+  }
 `;
 
 const TopMiddleCard = styled.div`
@@ -24,7 +46,8 @@ const TopMiddleCard = styled.div`
   border-left: 4px solid #f2f2f2;
   margin: auto 0;
   font-family: "Noto Sans KR", sans-serif;
-  gap: 1rem;
+  gap: 2rem;
+  cursor: pointer;
 
   h1 {
     font-size: 2.5rem;
@@ -52,6 +75,16 @@ const TopMiddleCard = styled.div`
       font-size: 1.5rem;
       text-align: left;
     }
+  }
+
+  @media all and (max-width: 1499px) and (min-width: 765px) {
+    width: 50%;
+    height: 300px;
+  }
+
+  @media all and (max-width: 764px) {
+    width: 90%;
+    border: 4px solid #f2f2f2;
   }
 `;
 
@@ -81,16 +114,18 @@ const TopMiddle = () => {
   return (
     <TopMiddleContainer>
       <TopMiddleWrapper>
-        <TopMiddleCard>
-          <h1>
-            마리아유외과
-            <br /> 둘러보기
-          </h1>
-          <h4>
-            마리아유외과
-            <br /> 소식을 알아보세요!
-          </h4>
-        </TopMiddleCard>
+        <Link href="./intro/introHospital">
+          <TopMiddleCard>
+            <h1>
+              마리아유외과
+              <br /> 둘러보기
+            </h1>
+            <h4>
+              마리아유외과
+              <br /> 소식을 알아보세요!
+            </h4>
+          </TopMiddleCard>
+        </Link>
         <TopMiddleCard>
           <h1>진료안내</h1>
           <span>대표전화</span>
@@ -99,15 +134,20 @@ const TopMiddle = () => {
             <span>진료시간보기</span>
           </TopMiddleCardBottom>
         </TopMiddleCard>
-        <TopMiddleCard>
-          <h1>찾아오시는 길</h1>
-          <Link href="#">
+        <Link href="./intro/locations">
+          <TopMiddleCard>
+            <h1>찾아오시는 길</h1>
             <span>대중교통 및 위치 안내</span>
-          </Link>
-        </TopMiddleCard>
-        <TopMiddleCard>
-          <h1>검진 안내</h1>
-        </TopMiddleCard>
+            <img src="../mainLocation.png" />
+          </TopMiddleCard>
+        </Link>
+        <Link href="./intro/introMedicalStaff">
+          <TopMiddleCard>
+            <h1>의료진소개</h1>
+            <span>의료진 둘러보기</span>
+            <img src="../doctors.png" />
+          </TopMiddleCard>
+        </Link>
       </TopMiddleWrapper>
     </TopMiddleContainer>
   );

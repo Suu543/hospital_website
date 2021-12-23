@@ -13,6 +13,7 @@ const MiddleContainer = styled.div`
 
 const MiddleCarouselWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 40vh;
   margin: auto;
@@ -22,38 +23,139 @@ const MiddleCarouselImageWrapper = styled.div`
   width: 50%;
   position: relative;
   top: -8rem;
+
+  @media all and (max-width: 965px) {
+    position: static;
+    width: 100%;
+  }
 `;
 
 const MiddleCarouselContent = styled.div`
   display: flex;
   flex-direction: column;
   font-family: "Noto Sans KR", sans-serif;
-  width: 30%;
+  width: 40%;
   margin: auto;
 
   h1 {
     font-size: 3rem;
     font-weight: bold;
+    color: #363532;
   }
 
   h2 {
     font-size: 1.6rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
+    color: #363532;
   }
 
   p {
     font-size: 1.5rem;
     margin-bottom: 3rem;
+    color: #363532;
+    width: 70%;
   }
 
   a {
-    width: 10.5%;
+    width: 15%;
     padding-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     display: inline-block;
     border-bottom: 2px solid black;
+    color: #363532;
+  }
+
+  @media all and (max-width: 1405px) and (min-width: 1225px) {
+    width: 40%;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+      
+    }
+
+    a {
+      width: 15%;
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: inline-block;
+      border-bottom: 2px solid black;
+    }
+  }
+
+  @media all and (max-width: 1224px) and (min-width: 965px) {
+    a {
+      width: 20%;
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: inline-block;
+      border-bottom: 2px solid black;
+    }
+  }
+
+  @media all and (max-width: 964px) and (min-width: 571px) {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 0;
+    text-align: center;
+
+    a {
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: inline-block;
+      border-bottom: 2px solid black;
+    }
+  }
+
+  @media all and (max-width: 570px) {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 0;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin: auto;
+      margin-bottom: 3rem;
+      width: 80%;
+    }
+
+    a {
+      padding-bottom: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: inline-block;
+      border-bottom: 2px solid black;
+    }
   }
 `;
 
@@ -68,7 +170,7 @@ const MiddleCarouselLegend = styled.p`
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
-  color: white;
+  color: #363532;
   font-weight: bold;
   font-family: "Noto Sans KR", sans-serif;
   padding-top: 4rem;
@@ -84,6 +186,82 @@ const MiddleCarouselLegend = styled.p`
     margin: auto;
     border-top: 2px solid white;
     padding-top: 1rem;
+  }
+
+  @media all and (max-width: 1482px) and (min-width: 1112px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #363532;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-top: 4rem;
+
+    &:before {
+      content: "${(props) => props.title}";
+      position: absolute;
+      top: -5rem;
+      left: 3rem;
+      width: 80%;
+      height: 1rem;
+      font-size: 2.5rem;
+      margin: auto;
+      border-top: 2px solid white;
+      padding-top: 1rem;
+    }
+  }
+
+  @media all and (max-width: 1111px) and (min-width: 571px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.3rem;
+    color: #363532;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-top: 4rem;
+
+    &:before {
+      content: "${(props) => props.title}";
+      position: absolute;
+      top: -5rem;
+      left: 1rem;
+      width: 95%;
+      height: 1rem;
+      font-size: 2.3rem;
+      margin: auto;
+      border-top: 2px solid white;
+      padding-top: 1rem;
+    }
+  }
+
+  @media all and (max-width: 570px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #363532;
+    font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-top: 4rem;
+    width: 100%;
+
+    &:before {
+      content: "${(props) => props.title}";
+      position: absolute;
+      top: -5rem;
+      left: 0.5rem;
+      width: 100%;
+      height: 1rem;
+      font-size: 2rem;
+      margin: auto;
+      border-top: 2px solid white;
+      padding-top: 1rem;
+    }
   }
 `;
 
@@ -119,7 +297,7 @@ const Middle = () => {
             </div>
             <div>
               <MiddleCarouselImage src="./test-background3.jpg" />
-              <MiddleCarouselLegend title="예약에서 필요서류까지">
+              <MiddleCarouselLegend title="예약에서 필요서류">
                 마리아 유외과는 예약에서 <br />
                 필요서류까지 빠짐없이 도와드립니다.
               </MiddleCarouselLegend>
@@ -154,10 +332,10 @@ const Middle = () => {
           <h2>소중한 당신의 가슴을 더욱 건강하게 지켜드립니다.</h2>
           <p>
             유방 및 갑상선 정기 검진에서부터 암이 아닌 양성질환의 관리, 조기암의
-            발견에 이르기까지 <br /> 모든 진료에서 여러분의 불안을 깨끗이 씻을
-            수 있게 시원하고 명쾌한 해답을 드리는 병원
+            발견에 이르기까지 모든 진료에서 여러분의 불안을 깨끗이 씻을 수 있게
+            시원하고 명쾌한 해답을 드리는 병원
           </p>
-          <Link href="#">
+          <Link href="./intro/introHospital">
             <a>자세히 보기</a>
           </Link>
         </MiddleCarouselContent>

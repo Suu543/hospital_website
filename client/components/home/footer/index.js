@@ -85,13 +85,13 @@ const Footer = () => {
               <Link href="/intro/introMedicalStaff">의료진소개</Link>
             </li>
             <li>
-              <Link href="/intro/introFacility">병원 둘러보기</Link>
+              <Link href="/intro/introTime">진료안내</Link>
             </li>
             <li>
               <Link href="/intro/locations">찾아오시는 길</Link>
             </li>
             <li>
-              <Link href="/">개인정보 취급방침</Link>
+              <Link href="/info/privacy">개인정보 취급방침</Link>
             </li>
           </FooterHeaderLists>
           <FooterHeaderLogos></FooterHeaderLogos>
@@ -106,7 +106,7 @@ const Footer = () => {
               <Link href="/intro/introMedicalStaff">의료진소개</Link>
             </li>
             <li>
-              <Link href="/intro/introFacility">병원 둘러보기</Link>
+              <Link href="/intro/introTime">진료안내</Link>
             </li>
             <li>
               <Link href="/intro/locations">찾아오시는 길</Link>
@@ -130,10 +130,10 @@ const Footer = () => {
           <FooterBodyLists>
             <li>마리아유외과 소식</li>
             <li>
-              <Link href="/intro/introFacility">자주묻는질문</Link>
+              <Link href="/info/notice">공지사항</Link>
             </li>
             <li>
-              <Link href="/intro/locations">공지사항</Link>
+              <Link href="/info/board">게시판</Link>
             </li>
           </FooterBodyLists>
         </FooterBodyWrapper>
